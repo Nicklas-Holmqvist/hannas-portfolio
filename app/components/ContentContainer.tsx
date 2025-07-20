@@ -8,8 +8,10 @@ type ContentContainerProps = {
 };
 
 function ContentContainer({ reverse }: ContentContainerProps) {
+  const rowDirection = reverse ? 'lg:flex-row-reverse' : 'lg:flex-row';
+
   return (
-    <section className={`flex flex-row${reverse ? '-reverse' : ''}`}>
+    <section className={`max-w-[1800] w-full flex flex-col ${rowDirection}`}>
       <InfoSection />
       <AdvantageSection />
     </section>

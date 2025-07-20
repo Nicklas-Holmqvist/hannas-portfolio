@@ -28,4 +28,35 @@
     --hover-background: rgba(255, 255, 255, 0.856);
     --active-background: rgb(238, 15, 15);
   }
+  section {
+    padding: 4rem 2rem;
+  }
+  article {
+    padding: 4rem 0;
+  }
+  h1 {
+    font-family: var(--font-playfair-display);
+    font-size: 3rem;
+    padding: 1rem 0;
+  }
+  h2 {
+    font-family: var(--font-playfair-display);
+    font-size: 2rem;
+    padding: 0.5rem 0 1.2rem 0;
+  }
+  h3 {
+    font-family: var(--font-playfair-display);
+    font-size: 1.5rem;
+    padding: 0.5rem 0 1rem 0;
+  }
+  p a {
+    font-family: var(--font-proza-libre);
+    font-size: 1rem;
+    max-width: 8rem;
+  }
+  li {
+    font-family: var(--font-proza-libre);
+    font-size: 1rem;
+    padding: 0.5rem 0;
+  }
 }

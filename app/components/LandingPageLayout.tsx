@@ -8,7 +8,7 @@ import ContentContainer from './ContentContainer';
 
 function LandingPageLayout() {
   return (
-    <div>
+    <div className="flex flex-col items-center">
       <Hero />
       <MyJourney />
       <ContentContainer reverse={false} />
