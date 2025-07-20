@@ -27,10 +27,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-emerald-300 dark:bg-black`}>
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-emerald-300 dark:bg-black mood:bg-green-500`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="mood"
           enableSystem
           disableTransitionOnChange>
           {children}

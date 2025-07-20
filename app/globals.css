@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @custom-variant dark (&:where(.dark, .dark *));
+@custom-variant mood (&:where(.mood, .mood *));
 
 @theme {
   --shadow-box-shadow-first: 0px 1px 0px var(--shadow-color);
@@ -20,5 +21,11 @@
     --border-color: rgba(255, 255, 255, 0.094);
     --hover-background: rgba(255, 255, 255, 0.055);
     --active-background: rgba(255, 255, 255, 0.03);
+  }
+  .mood {
+    --shadow-color: rgba(255, 255, 255, 0.094);
+    --border-color: rgba(255, 255, 255, 0.094);
+    --hover-background: rgba(255, 255, 255, 0.856);
+    --active-background: rgb(238, 15, 15);
   }
 }
