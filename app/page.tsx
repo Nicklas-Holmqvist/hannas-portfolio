@@ -1,6 +1,9 @@
-import { datoRequest } from '@/lib/datocms';
-import ThemeToggle from './theme/ThemeToggle';
 import { notFound } from 'next/navigation';
+import { datoRequest } from '@/lib/datocms';
+
+import Header from './components/Header';
+import ThemeToggle from './theme/ThemeToggle';
+import LandingPageLayout from './components/LandingPageLayout';
 
 type Landingpage = {
   allLandingpages: {
@@ -26,9 +29,10 @@ async function getLandingpage() {
 }
 async function Home() {
   const data: Landingpage = await getLandingpage();
-  console.log(data);
   return (
     <div className="">
+      <Header />
+      <LandingPageLayout />
       <h1>{data.allLandingpages[0].title}</h1>
       <ThemeToggle />
     </div>
