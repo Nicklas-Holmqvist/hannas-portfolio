@@ -1,32 +1,42 @@
 @import 'tailwindcss';
 @custom-variant dark (&:where(.dark, .dark *));
-@custom-variant mood (&:where(.mood, .mood *));
+@custom-variant sky (&:where(.sky, .sky *));
+@custom-variant hover (&:hover);
 
 @theme {
-  --shadow-box-shadow-first: 0px 1px 0px var(--shadow-color);
-  --color-button-border-color: var(--border-color);
-  --color-hover-background: var(--hover-background);
-  --color-active-background: var(--active-background);
+  --color-primary: var(--primary-color);
+  --color-secondary: var(--secondary-color);
+  --color-text: var(--text-color);
+  --color-light: var(--light-color);
+}
+
+span {
+  color: #525949;
+  color: #e0d7ce;
+  color: #b49e79;
+  color: #d8d4c9;
+  color: #5e4c3e;
+}
+span {
+  color: #ffffff;
+  color: rgb(244, 239, 235);
+  color: rgb(47, 65, 87);
+  color: #577c8e;
+  color: #c7d9e5;
 }
 
 @layer base {
   :root {
-    --shadow-color: rgba(55, 53, 47, 0.09);
-    --border-color: rgba(55, 53, 47, 0.09);
-    --hover-background: rgba(55, 53, 47, 0.06);
-    --active-background: rgba(55, 53, 47, 0.16);
+    --primary-color: rgb(82, 89, 73);
+    --secondary-color: rgb(180, 158, 121);
+    --text-color: rgb(94, 76, 62);
+    --light-color: rgb(224, 215, 206);
   }
   .dark {
-    --shadow-color: rgba(255, 255, 255, 0.094);
-    --border-color: rgba(255, 255, 255, 0.094);
-    --hover-background: rgba(255, 255, 255, 0.055);
-    --active-background: rgba(255, 255, 255, 0.03);
-  }
-  .mood {
-    --shadow-color: rgba(255, 255, 255, 0.094);
-    --border-color: rgba(255, 255, 255, 0.094);
-    --hover-background: rgba(255, 255, 255, 0.856);
-    --active-background: rgb(238, 15, 15);
+    --primary-color: rgb(87, 124, 142);
+    --secondary-color: rgb(87, 124, 142);
+    --text-color: rgb(244, 239, 235);
+    --dark-color: rgb(47, 65, 87);
   }
   section {
     padding: 4rem 2rem;
