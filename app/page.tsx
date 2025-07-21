@@ -2,7 +2,6 @@ import { notFound } from 'next/navigation';
 import { datoRequest } from '@/lib/datocms';
 
 import Header from './components/Header';
-import ThemeToggle from './theme/ThemeToggle';
 import LandingPageLayout from './components/LandingPageLayout';
 
 type Landingpage = {
@@ -34,7 +33,6 @@ async function Home() {
       <Header />
       <LandingPageLayout />
       <h1>{data.allLandingpages[0].title}</h1>
-      <ThemeToggle />
     </div>
   );
 }

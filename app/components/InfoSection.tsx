@@ -25,7 +25,18 @@ function InfoSection() {
         necessitatibus?
       </p>
       <div className="flex justify-center mt-10">
-        <Button label="Klicka" onClick={onClick} url={'https://www.smhi.se/'} />
+        <Button
+          type="primary"
+          label="Klicka"
+          onClick={onClick}
+          url={'https://www.smhi.se/'}
+        />
+        <Button
+          type="secondary"
+          label="Klicka"
+          onClick={onClick}
+          url={'https://www.smhi.se/'}
+        />
       </div>
     </article>
   );
