@@ -7,6 +7,8 @@ import { YogaData } from './components/Yoga';
 import { MyJourneyData } from './components/MyJourney';
 import LandingPageLayout from './components/LandingPageLayout';
 
+export const revalidate = 0;
+
 async function getLandingpage() {
   const query = `query work {
   reiki {
