@@ -10,7 +10,7 @@ function Header(url: HeaderProps) {
 
   const starIcon = (
     <Image
-      className="pb-2"
+      className="pb-2 hidden md:block"
       src={url.url}
       alt={''}
       width={imageSize}
@@ -19,9 +19,9 @@ function Header(url: HeaderProps) {
   );
 
   return (
-    <nav className="flex flex-row items-center justify-center pt-4 pb-6 fixed top-0 w-full z-50 bg-linear-to-b from-(--light-color) from-75% to-transparent">
+    <nav className="flex flex-row items-center justify-center pt-4 pb-6 md:pt-6 md:pb-10 fixed top-0 w-full z-50 bg-linear-to-b from-(--light-color) from-75% to-transparent">
       {starIcon}
-      <h1 className="px-6">Growth mindset and soul</h1>
+      <h1 className="text-3xl md:text-4xl px-6">Growth mindset and soul</h1>
       {starIcon}
     </nav>
   );
