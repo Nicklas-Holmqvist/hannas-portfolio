@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Playfair_Display, Proza_Libre } from 'next/font/google';
+import { Playfair_Display, Proza_Libre, Parisienne } from 'next/font/google';
 
 import './globals.css';
 import ThemeProvider from './theme/theme-provider';
@@ -7,6 +7,11 @@ import ThemeProvider from './theme/theme-provider';
 const playfair_display = Playfair_Display({
   variable: '--font-playfair-display',
   subsets: ['latin'],
+});
+
+const parisienne = Parisienne({
+  variable: '--parisienne',
+  weight: ['400'],
 });
 
 const proza_libre = Proza_Libre({
@@ -30,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${playfair_display.variable} ${proza_libre.variable} antialiased  ${light} ${dark}`}>
+        className={`${playfair_display.variable} ${proza_libre.variable} ${parisienne.variable} antialiased  ${light} ${dark}`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

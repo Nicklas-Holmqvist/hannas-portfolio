@@ -5,16 +5,21 @@ import About from './About';
 import Footer from './Footer';
 import MyJourney from './MyJourney';
 import ContentContainer from './ContentContainer';
+import Reiki from './Reiki';
+import Yoga from './Yoga';
 
-function LandingPageLayout() {
+type DataProps = { data: any };
+
+function LandingPageLayout({ data }: DataProps) {
+  const { reiki, yoga, allAbouts, footer } = data;
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center markdown">
       <Hero />
-      <MyJourney />
-      <ContentContainer reverse={false} />
-      <ContentContainer reverse={true} />
-      <About />
-      <Footer />
+      <MyJourney data={allAbouts[1]} />
+      <Reiki data={reiki} />
+      <Yoga data={yoga} />
+      <MyJourney data={allAbouts[0]} />
+      {/* <Footer data={footer} /> */}
     </div>
   );
 }

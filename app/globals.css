@@ -30,7 +30,7 @@ span {
     --primary-color: rgb(82, 89, 73);
     --secondary-color: rgb(180, 158, 121);
     --text-color: rgb(94, 76, 62);
-    --light-color: rgb(224, 215, 206);
+    --light-color: rgb(241, 239, 227);
   }
   .dark {
     --primary-color: rgb(87, 124, 142);
@@ -45,21 +45,31 @@ span {
     padding: 4rem 0;
   }
   h1 {
-    font-family: var(--font-playfair-display);
+    font-family: var(--parisienne);
     font-size: 3rem;
-    padding: 1rem 0;
   }
   h2 {
     font-family: var(--font-playfair-display);
-    font-size: 2rem;
-    padding: 0.5rem 0 1.2rem 0;
+    font-size: 2.5rem;
+    padding: 0.5rem 0 2.5rem 0;
   }
   h3 {
+    font-family: var(--font-playfair-display);
+    font-size: 2rem;
+    padding: 0.5rem 0 1rem 0;
+    margin: 0 0 3.5rem 0;
+  }
+  h4 {
     font-family: var(--font-playfair-display);
     font-size: 1.5rem;
     padding: 0.5rem 0 1rem 0;
   }
-  p a {
+  p {
+    font-family: var(--font-proza-libre);
+    font-size: 1rem;
+  }
+
+  a {
     font-family: var(--font-proza-libre);
     font-size: 1rem;
     max-width: 8rem;
@@ -68,5 +78,11 @@ span {
     font-family: var(--font-proza-libre);
     font-size: 1rem;
     padding: 0.5rem 0;
+  }
+  .roman {
+    font-family: var(--font-playfair-display);
+  }
+  .markdown {
+    white-space: break-spaces;
   }
 }
