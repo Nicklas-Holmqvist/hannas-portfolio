@@ -4,7 +4,6 @@ import Hero from './Hero';
 import About from './About';
 import Footer from './Footer';
 import MyJourney from './MyJourney';
-import ContentContainer from './ContentContainer';
 import Reiki from './Reiki';
 import Yoga from './Yoga';
 
