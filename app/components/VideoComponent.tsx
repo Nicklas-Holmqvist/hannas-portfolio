@@ -14,6 +14,11 @@ function VideoComponent() {
       playsInline
       loop
       muted
+      poster={`${
+        isTabletOrMobile
+          ? '/hanna_hemsida_poster.png'
+          : '/hanna_hemsida_hog_poster.png'
+      }`}
       src={`${
         isTabletOrMobile ? '/hanna_hemsida.mp4' : '/hanna_hemsida_hog.mp4'
       }`}
