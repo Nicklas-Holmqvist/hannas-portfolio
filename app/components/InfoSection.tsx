@@ -6,6 +6,7 @@ const onClick = (url: string) => {
 };
 
 type InfoSectionProps = {
+  //eslint-disable-line
   data?: any;
 };
 

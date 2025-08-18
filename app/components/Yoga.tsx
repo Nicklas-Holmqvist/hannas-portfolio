@@ -5,6 +5,7 @@ import AdvantageSection from './AdvantageSection';
 import Button from './Button';
 
 type ContentContainerProps = {
+  //eslint-disable-line
   data?: any;
 };
 

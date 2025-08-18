@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 
 type InfoSectionProps = {
+  //eslint-disable-line
   data?: any;
 };
 
