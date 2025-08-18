@@ -2,10 +2,10 @@ import { notFound } from 'next/navigation';
 import { datoRequest } from '@/lib/datocms';
 
 import Header from './components/Header';
-import LandingPageLayout from './components/LandingPageLayout';
 import { ReikiData } from './components/Reiki';
 import { YogaData } from './components/Yoga';
 import { MyJourneyData } from './components/MyJourney';
+import LandingPageLayout from './components/LandingPageLayout';
 
 async function getLandingpage() {
   const query = `query work {

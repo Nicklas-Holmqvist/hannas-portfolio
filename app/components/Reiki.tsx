@@ -1,8 +1,8 @@
 import React from 'react';
 
+import Button from './Button';
 import InfoSection from './InfoSection';
 import AdvantageSection from './AdvantageSection';
-import Button from './Button';
 
 type ReikiProps = {
   data: ReikiData;

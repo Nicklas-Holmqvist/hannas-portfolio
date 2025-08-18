@@ -1,9 +1,9 @@
 import React from 'react';
 
 import Hero from './Hero';
-import MyJourney, { MyJourneyData } from './MyJourney';
-import Reiki, { ReikiData } from './Reiki';
 import Yoga, { YogaData } from './Yoga';
+import Reiki, { ReikiData } from './Reiki';
+import MyJourney, { MyJourneyData } from './MyJourney';
 
 type DataProps = {
   data: {
