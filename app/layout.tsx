@@ -12,11 +12,13 @@ const playfair_display = Playfair_Display({
 const parisienne = Parisienne({
   variable: '--parisienne',
   weight: ['400'],
+  subsets: ['latin'],
 });
 
 const proza_libre = Proza_Libre({
   variable: '--font-proza-libre',
   weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
