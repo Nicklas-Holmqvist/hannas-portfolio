@@ -2,8 +2,28 @@ import React from 'react';
 import Image from 'next/image';
 
 type InfoSectionProps = {
-  //eslint-disable-line
-  data?: any;
+  data: Data;
+};
+
+type Data = {
+  title: string;
+  advantage: Array<{
+    id: string;
+    image: {
+      url: string;
+    };
+    title?: string;
+    information: string;
+  }>;
+};
+
+type AdvantageProps = {
+  id: string;
+  image: {
+    url: string;
+  };
+  title?: string;
+  information: string;
 };
 
 function AdvantageSection({ data }: InfoSectionProps) {
@@ -12,7 +32,7 @@ function AdvantageSection({ data }: InfoSectionProps) {
       <h3 className="text-center">{data.title}</h3>
       <ul className="text-center">
         <div className="flex flex-col xl:flex-row justify-center gap-28">
-          {data.advantage.map((item: any) => (
+          {data.advantage.map((item: AdvantageProps) => (
             <li key={item.id} className="flex flex-col items-center">
               <Image
                 className="pb-4"

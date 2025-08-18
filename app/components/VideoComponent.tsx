@@ -2,12 +2,7 @@
 
 import { useMediaQuery } from 'react-responsive';
 
-type VideoComponentProps = {
-  //eslint-disable-line
-  data: any;
-};
-
-function VideoComponent({ data }: VideoComponentProps) {
+function VideoComponent() {
   const isTabletOrMobile = useMediaQuery({
     query: '(min-width: 1500px)',
   });

@@ -2,10 +2,13 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 
 type MyJourneyProps = {
-  //eslint-disable-line
-  data: any;
+  data: MyJourneyData;
 };
 
+export type MyJourneyData = {
+  title: string;
+  information: string;
+};
 function MyJourney({ data }: MyJourneyProps) {
   return (
     <section className="max-w-[1800] mt-10">

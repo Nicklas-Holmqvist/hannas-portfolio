@@ -3,6 +3,9 @@ import { datoRequest } from '@/lib/datocms';
 
 import Header from './components/Header';
 import LandingPageLayout from './components/LandingPageLayout';
+import { ReikiData } from './components/Reiki';
+import { YogaData } from './components/Yoga';
+import { MyJourneyData } from './components/MyJourney';
 
 async function getLandingpage() {
   const query = `query work {
@@ -50,18 +53,21 @@ async function getLandingpage() {
   }
 }`;
 
+  type DataProps = {
+    reiki: ReikiData;
+    yoga: YogaData;
+    allAbouts: MyJourneyData[];
+  };
+
   const response = (await datoRequest({
     query: query,
-    //eslint-disable-line
-  })) as any | null;
+  })) as DataProps | null;
 
   if (response === null) return notFound();
   return response;
 }
 async function Home() {
-  //eslint-disable-line
-  const data: any = await getLandingpage();
-  console.log(data.yoga.yogaAdvantage[0].advantage[0].image.url);
+  const data = await getLandingpage();
   return (
     <div className="">
       <Header url={data.yoga.yogaAdvantage[0].advantage[0].image.url} />

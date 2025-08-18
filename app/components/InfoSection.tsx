@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 
-const onClick = (url: string) => {
-  alert(url);
+type InfoSectionProps = {
+  data: Data;
 };
 
-type InfoSectionProps = {
-  //eslint-disable-line
-  data?: any;
+type Data = {
+  title: string;
+  information: string;
+  secondTitle?: string;
+  secondInformation?: string;
 };
 
 function InfoSection({ data }: InfoSectionProps) {
