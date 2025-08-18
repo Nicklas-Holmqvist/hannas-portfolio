@@ -4,12 +4,31 @@ import InfoSection from './InfoSection';
 import AdvantageSection from './AdvantageSection';
 import Button from './Button';
 
-type ContentContainerProps = {
-  //eslint-disable-line
-  data?: any;
+type ReikiProps = {
+  data: ReikiData;
 };
 
-function ContentContainer({ data }: ContentContainerProps) {
+export type ReikiData = {
+  title: string;
+  information: string;
+  buttonText: string;
+  buttonLink: string;
+  reikiAdvantage: {
+    title: string;
+    information: string;
+    advantage: Array<{
+      id: string;
+      information: string;
+      title?: string;
+      image: {
+        alt: string;
+        url: string;
+      };
+    }>;
+  }[];
+};
+
+function Reiki({ data }: ReikiProps) {
   return (
     <section className={`max-w-[1800] flex flex-col justify-center`}>
       <InfoSection data={data} />
@@ -21,4 +40,4 @@ function ContentContainer({ data }: ContentContainerProps) {
   );
 }
 
-export default ContentContainer;
+export default Reiki;

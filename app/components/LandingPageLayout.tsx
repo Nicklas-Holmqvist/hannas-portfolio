@@ -1,15 +1,20 @@
 import React from 'react';
 
 import Hero from './Hero';
-import MyJourney from './MyJourney';
-import Reiki from './Reiki';
-import Yoga from './Yoga';
+import MyJourney, { MyJourneyData } from './MyJourney';
+import Reiki, { ReikiData } from './Reiki';
+import Yoga, { YogaData } from './Yoga';
 
-//eslint-disable-line
-type DataProps = { data: any };
+type DataProps = {
+  data: {
+    reiki: ReikiData;
+    yoga: YogaData;
+    allAbouts: MyJourneyData[];
+  };
+};
 
 function LandingPageLayout({ data }: DataProps) {
-  const { reiki, yoga, allAbouts, footer } = data;
+  const { reiki, yoga, allAbouts } = data;
   return (
     <div className="flex flex-col items-center markdown">
       <Hero />

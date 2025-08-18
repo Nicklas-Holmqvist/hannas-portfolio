@@ -2,8 +2,19 @@ import React from 'react';
 import Image from 'next/image';
 
 type InfoSectionProps = {
-  //eslint-disable-line
-  data?: any;
+  data: Data;
+};
+
+type Data = {
+  title: string;
+  advantage: Array<{
+    id: string;
+    image: {
+      url: string;
+    };
+    title?: string;
+    information: string;
+  }>;
 };
 
 function AdvantageSection({ data }: InfoSectionProps) {

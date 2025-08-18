@@ -52,16 +52,13 @@ async function getLandingpage() {
 
   const response = (await datoRequest({
     query: query,
-    //eslint-disable-line
   })) as any | null;
 
   if (response === null) return notFound();
   return response;
 }
 async function Home() {
-  //eslint-disable-line
   const data: any = await getLandingpage();
-  console.log(data.yoga.yogaAdvantage[0].advantage[0].image.url);
   return (
     <div className="">
       <Header url={data.yoga.yogaAdvantage[0].advantage[0].image.url} />
