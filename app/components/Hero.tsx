@@ -4,7 +4,7 @@ import VideoComponent from './VideoComponent';
 function Hero() {
   return (
     <div className="w-full h-[100vh]">
-      <VideoComponent data={{}} />
+      <VideoComponent />
     </div>
   );
 }

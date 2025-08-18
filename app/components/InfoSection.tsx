@@ -1,10 +1,6 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 
-const onClick = (url: string) => {
-  alert(url);
-};
-
 type InfoSectionProps = {
   data: Data;
 };
