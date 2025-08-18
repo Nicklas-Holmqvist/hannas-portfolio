@@ -13,26 +13,64 @@ type Landingpage = {
 
 async function getLandingpage() {
   const query = `query work {
-    allLandingpages {
+  reiki {
     id
     title
+    information
+    buttonText
+    buttonLink
+    reikiAdvantage {
+      title
+      advantage {
+        id
+        information
+        image {
+          alt
+          filename
+          url
+        }
+      }
+    }
   }
-  }`;
+  yoga {
+    id
+    title
+    information
+    secondTitle
+    secondInformation
+    buttonText
+    buttonLink
+    yogaAdvantage{
+      title
+      advantage{id
+      information
+      title
+      image{alt
+      filename
+      url}}
+    }
+  }
+  allAbouts {
+    title
+    information
+    id
+  }
+}`;
 
   const response = (await datoRequest({
     query: query,
-  })) as Landingpage | null;
+  })) as any | null;
 
   if (response === null) return notFound();
   return response;
 }
 async function Home() {
-  const data: Landingpage = await getLandingpage();
+  const data: any = await getLandingpage();
+  console.log(data.yoga.yogaAdvantage[0].advantage[0].image.url);
   return (
     <div className="">
-      <Header />
-      <LandingPageLayout />
-      <h1>{data.allLandingpages[0].title}</h1>
+      <Header url={data.yoga.yogaAdvantage[0].advantage[0].image.url} />
+      <LandingPageLayout data={data} />
     </div>
   );
 }
