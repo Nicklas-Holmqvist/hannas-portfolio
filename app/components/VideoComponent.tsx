@@ -3,6 +3,7 @@
 import { useMediaQuery } from 'react-responsive';
 
 type VideoComponentProps = {
+  //eslint-disable-line
   data: any;
 };
 

@@ -4,13 +4,6 @@ import { datoRequest } from '@/lib/datocms';
 import Header from './components/Header';
 import LandingPageLayout from './components/LandingPageLayout';
 
-type Landingpage = {
-  allLandingpages: {
-    id: number;
-    title: string;
-  }[];
-};
-
 async function getLandingpage() {
   const query = `query work {
   reiki {
@@ -59,12 +52,14 @@ async function getLandingpage() {
 
   const response = (await datoRequest({
     query: query,
+    //eslint-disable-line
   })) as any | null;
 
   if (response === null) return notFound();
   return response;
 }
 async function Home() {
+  //eslint-disable-line
   const data: any = await getLandingpage();
   console.log(data.yoga.yogaAdvantage[0].advantage[0].image.url);
   return (

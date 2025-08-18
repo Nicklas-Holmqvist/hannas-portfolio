@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import ThemeToggle from '../theme/ThemeToggle';
 
 type HeaderProps = {
   url: string;
@@ -24,8 +23,6 @@ function Header(url: HeaderProps) {
       {starIcon}
       <h1 className="px-6">Growth mindset and soul</h1>
       {starIcon}
-
-      {/* <ThemeToggle /> */}
     </nav>
   );
 }

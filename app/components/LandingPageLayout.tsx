@@ -1,12 +1,11 @@
 import React from 'react';
 
 import Hero from './Hero';
-import About from './About';
-import Footer from './Footer';
 import MyJourney from './MyJourney';
 import Reiki from './Reiki';
 import Yoga from './Yoga';
 
+//eslint-disable-line
 type DataProps = { data: any };
 
 function LandingPageLayout({ data }: DataProps) {
@@ -18,7 +17,6 @@ function LandingPageLayout({ data }: DataProps) {
       <Reiki data={reiki} />
       <Yoga data={yoga} />
       <MyJourney data={allAbouts[0]} />
-      {/* <Footer data={footer} /> */}
     </div>
   );
 }

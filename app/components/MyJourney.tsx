@@ -2,6 +2,7 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 
 type MyJourneyProps = {
+  //eslint-disable-line
   data: any;
 };
 
