@@ -33,7 +33,7 @@ function Reiki({ data }: ReikiProps) {
     <section className={`max-w-[1800] flex flex-col justify-center`}>
       <InfoSection data={data} />
       <AdvantageSection data={data.reikiAdvantage[0]} />
-      <div className="flex justify-center pt-16 space-x-4">
+      <div className="flex justify-center pt-8 space-x-4">
         <Button type="primary" label={data.buttonText} url={data.buttonLink} />
       </div>
     </section>
