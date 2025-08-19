@@ -48,6 +48,10 @@ span {
   article:last-child {
     padding-top: 3rem;
   }
+
+  nav a {
+    font-family: var(--font-playfair-display);
+  }
   h1 {
     font-family: var(--parisienne);
     font-size: 3rem;

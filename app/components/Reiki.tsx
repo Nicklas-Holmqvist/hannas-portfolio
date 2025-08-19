@@ -1,4 +1,7 @@
-import React from 'react';
+'use client';
+
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 
 import Button from './Button';
 import InfoSection from './InfoSection';
@@ -29,14 +32,21 @@ export type ReikiData = {
 };
 
 function Reiki({ data }: ReikiProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: false });
   return (
-    <section className={`max-w-[1800] flex flex-col justify-center`}>
+    <motion.section
+      id="reiki"
+      ref={ref}
+      className={`max-w-[1800] scroll-mt-24 ${
+        isInView ? 'opacity-100' : 'opacity-0'
+      } delay-100 transition-opacity duration-500 ease-in-out`}>
       <InfoSection data={data} />
       <AdvantageSection data={data.reikiAdvantage[0]} />
       <div className="flex justify-center pt-8 space-x-4">
         <Button type="primary" label={data.buttonText} url={data.buttonLink} />
       </div>
-    </section>
+    </motion.section>
   );
 }
 
