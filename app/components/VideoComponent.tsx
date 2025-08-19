@@ -1,15 +1,10 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useMediaQuery } from 'react-responsive';
 
 import { fadeIn } from '../transitions/allTransitions';
 
 function VideoComponent() {
-  const isTabletOrMobile = useMediaQuery({
-    query: '(min-width: 1500px)',
-  });
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -22,9 +17,7 @@ function VideoComponent() {
         playsInline
         loop
         muted
-        src={`${
-          isTabletOrMobile ? '/hanna_hemsida.mp4' : '/hanna_hemsida_hog.mp4'
-        }`}
+        src="/tablet_video.mp4"
       />
     </motion.div>
   );
