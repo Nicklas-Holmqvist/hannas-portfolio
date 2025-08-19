@@ -1,6 +1,6 @@
 import Markdown from 'react-markdown';
+
 import ImageLogo from './ImageLogo';
-import { url } from 'inspector';
 
 type FooterProps = {
   data: FooterData;
@@ -40,6 +40,8 @@ function Footer({ data }: FooterProps) {
     },
   ];
 
+  const date = new Date();
+
   return (
     <footer className="text-center text-light bg-primary w-full py-[6rem]">
       <h2>{data.title}</h2>
@@ -64,6 +66,10 @@ function Footer({ data }: FooterProps) {
           </a>
         ))}
       </div>
+      <p className="pt-10">
+        Copyright &copy; | {date.getFullYear()} - Hanna Klang - All rights
+        reserved
+      </p>
     </footer>
   );
 }
