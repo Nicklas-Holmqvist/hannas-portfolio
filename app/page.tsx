@@ -6,6 +6,7 @@ import { ReikiData } from './components/Reiki';
 import { YogaData } from './components/Yoga';
 import { MyJourneyData } from './components/MyJourney';
 import LandingPageLayout from './components/LandingPageLayout';
+import { FooterData } from './components/Footer';
 
 export const revalidate = 0;
 
@@ -53,12 +54,30 @@ async function getLandingpage() {
     information
     id
   }
+  footer {
+    busniessname
+    phone
+    email
+    instagramLink
+    linkedinLink
+    address
+    title
+        instagramLogo {
+      alt
+      url
+    }
+    linkedinLogo {
+      alt
+      url
+    }
+  }
 }`;
 
   type DataProps = {
     reiki: ReikiData;
     yoga: YogaData;
     allAbouts: MyJourneyData[];
+    footer: FooterData;
   };
 
   const response = (await datoRequest({
