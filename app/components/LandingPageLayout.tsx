@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Hero from './Hero';
+import Lines from './Lines';
 import Yoga, { YogaData } from './Yoga';
 import Reiki, { ReikiData } from './Reiki';
 import MyJourney, { MyJourneyData } from './MyJourney';
@@ -16,12 +17,17 @@ type DataProps = {
 function LandingPageLayout({ data }: DataProps) {
   const { reiki, yoga, allAbouts } = data;
   return (
-    <div className="flex flex-col items-center markdown pb-[6rem]">
+    <div className=" markdown">
       <Hero />
-      <MyJourney data={allAbouts[1]} />
-      <Reiki data={reiki} />
-      <Yoga data={yoga} />
-      <MyJourney data={allAbouts[0]} />
+      <div className="flex flex-col items-center py-[6rem]">
+        <MyJourney data={allAbouts[1]} />
+        <Lines />
+        <Reiki data={reiki} />
+        <Lines />
+        <Yoga data={yoga} />
+        <Lines />
+        <MyJourney data={allAbouts[0]} />
+      </div>
     </div>
   );
 }
