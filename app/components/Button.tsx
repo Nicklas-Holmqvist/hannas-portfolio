@@ -17,13 +17,16 @@ function Button({ type = 'primary', label = 'Boka', url }: ButtonProps) {
   const typeOfButton =
     type === 'primary' ? primaryButtonStyle : secondaryButtonStyle;
 
+  const targetValue = url.includes('mailto') ? '_self' : '_blank';
+
   return (
-    <button
-      type="button"
-      onClick={() => console.log(url)}
-      className={`${typeOfButton} cursor-pointer py-2 px-6 border rounded transition border-2 border-secondary`}>
-      {label}
-    </button>
+    <a href={url} target={targetValue} className="no-underline">
+      <button
+        type="button"
+        className={`${typeOfButton} cursor-pointer py-2 px-6 border rounded transition border-2 border-secondary`}>
+        {label}
+      </button>
+    </a>
   );
 }
 
