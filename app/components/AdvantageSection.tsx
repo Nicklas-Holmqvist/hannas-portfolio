@@ -29,9 +29,9 @@ type AdvantageProps = {
 function AdvantageSection({ data }: InfoSectionProps) {
   return (
     <article className="max-w-[900px] w-full flex flex-col items-center justify-center basis-2/3">
-      <h3 className="text-center">{data.title}</h3>
+      <h3 className="text-center pb-10">{data.title}</h3>
       <ul className="text-center">
-        <div className="flex flex-col xl:flex-row justify-center gap-28">
+        <div className="flex flex-col xl:flex-row justify-center gap-10 xl:gap-28">
           {data.advantage.map((item: AdvantageProps) => (
             <li key={item.id} className="flex flex-col items-center">
               <Image

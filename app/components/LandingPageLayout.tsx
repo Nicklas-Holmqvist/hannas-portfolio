@@ -16,7 +16,7 @@ type DataProps = {
 function LandingPageLayout({ data }: DataProps) {
   const { reiki, yoga, allAbouts } = data;
   return (
-    <div className="flex flex-col items-center markdown">
+    <div className="flex flex-col items-center markdown pb-[6rem]">
       <Hero />
       <MyJourney data={allAbouts[1]} />
       <Reiki data={reiki} />

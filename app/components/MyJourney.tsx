@@ -11,11 +11,11 @@ export type MyJourneyData = {
 };
 function MyJourney({ data }: MyJourneyProps) {
   return (
-    <section className="max-w-[1800] mt-10">
+    <section className="max-w-[1800]">
       <h2 className="text-center">{data.title}</h2>
-      <p className="text-center max-w-2xl">
+      <div className="text-center max-w-2xl">
         <ReactMarkdown>{data.information}</ReactMarkdown>
-      </p>
+      </div>
     </section>
   );
 }
