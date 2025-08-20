@@ -66,7 +66,7 @@ function Footer({ data }: FooterProps) {
           </a>
         ))}
       </div>
-      <p className="pt-10">
+      <p className="pt-10 text-xs md:text-lg">
         Copyright &copy; | {date.getFullYear()} - Hanna Klang - All rights
         reserved
       </p>

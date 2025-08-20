@@ -11,22 +11,36 @@ type MobileMenuProps = {
 
 function MobileMenu({ toggleDrawer, navList }: MobileMenuProps) {
   return (
-    <motion.nav
-      initial={{ left: '-100%' }}
-      animate={{ left: 0 }}
-      className="mobile-menu absolute fixed top-0 left-0 w-full h-full bg-primary text-light z-10 flex items-center justify-center">
-      <ul className="flex flex-col space-x-6">
+    <nav>
+      <ul className="flex flex-col space-y-4">
         {navList.map((item) => (
-          <li key={item.href} onClick={() => toggleDrawer(false)}>
+          <motion.li
+            initial={{
+              marginTop: '-10%',
+              opacity: 0,
+            }}
+            animate={{
+              marginTop: 0,
+              opacity: 1,
+              transition: { duration: 0.3, delay: 0.3 },
+            }}
+            exit={{
+              marginTop: '-10%',
+              opacity: 0,
+              transition: { duration: 0.3 },
+            }}
+            className="text-center"
+            key={item.href}
+            onClick={() => toggleDrawer(false)}>
             <a
               href={item.href}
-              className="text-[2rem] hover:border-b-2 transition-border duration-50 ease-in-out">
+              className="text-[2rem] hover:border-b-2 transition-border duration-50 ease-in-out ">
               {item.label}
             </a>
-          </li>
+          </motion.li>
         ))}
       </ul>
-    </motion.nav>
+    </nav>
   );
 }
 
