@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 import MobileMenu from './MobilMenu';
@@ -44,31 +44,47 @@ function Header(url: HeaderProps) {
         <HamburgerButton toggleDrawer={handleDrawerToggle} active={drawer} />
       )}
       <h1
-        className={`text-3xl md:text-4xl px-6`}
+        className={`text-2xl md:text-4xl xs:text-3xl px-6`}
         onClick={() => window.scrollTo(0, 0)}>
         Growth mindset and soul
       </h1>
-      {drawer ? (
-        <MobileMenu
-          drawer={drawer}
-          toggleDrawer={handleDrawerToggle}
-          navList={navList}
-        />
-      ) : (
-        <nav className="hidden xl:flex ml-4">
-          <ul className="flex space-x-6">
-            {navList.map((item) => (
-              <li key={item.href}>
-                <a
-                  href={item.href}
-                  className="text-[1.3rem] hover:border-b-2 transition-border duration-50 ease-in-out">
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      )}
+      <AnimatePresence>
+        {drawer ? (
+          <motion.div
+            key="mobileMenu"
+            initial={{
+              left: '-100%',
+              opacity: 0,
+            }}
+            animate={{ left: 0, opacity: 1, transition: { duration: 0.3 } }}
+            exit={{
+              left: '-100%',
+              opacity: 0,
+              transition: { delay: 0.3, duration: 0.3 },
+            }}
+            className="mobile-menu absolute fixed top-0 left-0 w-full h-full bg-primary text-light z-10 flex items-center justify-center">
+            <MobileMenu
+              drawer={drawer}
+              toggleDrawer={handleDrawerToggle}
+              navList={navList}
+            />
+          </motion.div>
+        ) : (
+          <nav className="hidden xl:flex ml-4">
+            <ul className="flex space-x-6">
+              {navList.map((item) => (
+                <li key={item.href}>
+                  <a
+                    href={item.href}
+                    className="text-[1.3rem] hover:border-b-2 transition-border duration-50 ease-in-out">
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 }
