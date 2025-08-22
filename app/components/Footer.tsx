@@ -1,9 +1,12 @@
 import Markdown from 'react-markdown';
 
-import ImageLogo from './ImageLogo';
+import Instagram from '../icons/Instagram';
+import LinkedIn from '../icons/LinkedIn';
+import { socialMediaData } from './Header';
 
 type FooterProps = {
   data: FooterData;
+  socialMedia: socialMediaData[];
 };
 
 export type FooterData = {
@@ -24,22 +27,9 @@ export type FooterData = {
   };
 };
 
-function Footer({ data }: FooterProps) {
-  const socialMediaLinks = [
-    {
-      url: data.instagramLink,
-      imageUrl: data.instagramLogo.url,
-      imageAlt: data.instagramLogo.alt,
-      imageSize: 25,
-    },
-    {
-      url: data.linkedinLink,
-      imageUrl: data.linkedinLogo.url,
-      imageAlt: data.linkedinLogo.alt,
-      imageSize: 25,
-    },
-  ];
+const color = 'var(--light-color)';
 
+function Footer({ data, socialMedia }: FooterProps) {
   const date = new Date();
 
   return (
@@ -56,13 +46,17 @@ function Footer({ data }: FooterProps) {
         <Markdown>{data.address}</Markdown>
       </address>
       <div className="flex justify-center items-center gap-8 pt-10">
-        {socialMediaLinks.map((items, index) => (
-          <a key={index} href={items.url} target="_blank">
-            <ImageLogo
-              url={items.imageUrl}
-              alt={items.imageAlt}
-              imageSize={items.imageSize}
-            />
+        {socialMedia.map((item, index) => (
+          <a
+            key={index}
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer">
+            {item.alt === 'Instagram' ? (
+              <Instagram color={color} />
+            ) : (
+              <LinkedIn color={color} />
+            )}
           </a>
         ))}
       </div>
