@@ -81,7 +81,7 @@ function Header(url: HeaderProps) {
             />
           </motion.div>
         ) : (
-          <nav className="hidden xl:flex ml-4">
+          <nav className="hidden xl:flex ml-4 pb-4">
             <ul className="flex space-x-6">
               {navList.map((item) => (
                 <li key={item.href}>
