@@ -8,7 +8,7 @@ function HamburgerButton({ toggleDrawer, active }: HamburgerButtonProps) {
       aria-label="Toggle menu"
       type="button"
       data-testid="hamburger-button"
-      className="fixed left-0 top-0 py-8 md:py-6 px-8 z-20"
+      className="fixed left-0 top-0 py-8 px-8 z-20"
       onClick={toggleDrawer}>
       {active ? (
         <LuX size={25} className="stroke-light" />
