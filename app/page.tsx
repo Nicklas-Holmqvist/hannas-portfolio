@@ -7,6 +7,7 @@ import { YogaData } from './components/Yoga';
 import { MyJourneyData } from './components/MyJourney';
 import LandingPageLayout from './components/LandingPageLayout';
 import { FooterData } from './components/Footer';
+import { svg } from 'framer-motion/client';
 
 export const revalidate = 0;
 
@@ -89,10 +90,25 @@ async function getLandingpage() {
 }
 async function Home() {
   const data = await getLandingpage();
+
+  const socialMediaLinks = [
+    {
+      url: data.footer.instagramLink,
+      svg: '/instagram.svg',
+      alt: 'Instagram',
+      imageSize: 25,
+    },
+    {
+      url: data.footer.linkedinLink,
+      svg: '/linkedin.svg',
+      alt: 'LinkedIn',
+      imageSize: 25,
+    },
+  ];
   return (
     <div className="">
-      <Header url={data.yoga.yogaAdvantage[0].advantage[0].image.url} />
-      <LandingPageLayout data={data} />
+      <Header socialMedia={socialMediaLinks} />
+      <LandingPageLayout data={data} socialMedia={socialMediaLinks} />
     </div>
   );
 }

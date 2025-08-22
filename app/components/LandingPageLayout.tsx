@@ -6,6 +6,7 @@ import Yoga, { YogaData } from './Yoga';
 import Reiki, { ReikiData } from './Reiki';
 import MyJourney, { MyJourneyData } from './MyJourney';
 import Footer, { FooterData } from './Footer';
+import { socialMediaData } from './Header';
 
 type DataProps = {
   data: {
@@ -14,9 +15,10 @@ type DataProps = {
     allAbouts: MyJourneyData[];
     footer: FooterData;
   };
+  socialMedia: socialMediaData[];
 };
 
-function LandingPageLayout({ data }: DataProps) {
+function LandingPageLayout({ data, socialMedia }: DataProps) {
   const { reiki, yoga, allAbouts, footer } = data;
   return (
     <div className="markdown">
@@ -30,7 +32,7 @@ function LandingPageLayout({ data }: DataProps) {
         <Lines />
         <MyJourney data={allAbouts[0]} />
       </div>
-      <Footer data={footer} />
+      <Footer data={footer} socialMedia={socialMedia} />
     </div>
   );
 }

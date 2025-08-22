@@ -7,12 +7,21 @@ import MobileMenu from './MobilMenu';
 import HamburgerButton from './HamburgerButton';
 import { fadeIn } from '../transitions/allTransitions';
 import { useMediaQuery } from 'react-responsive';
+import Instagram from '../icons/Instagram';
+import LinkedIn from '../icons/LinkedIn';
 
 type HeaderProps = {
-  url: string;
+  socialMedia: socialMediaData[];
 };
 
-function Header(url: HeaderProps) {
+export type socialMediaData = {
+  url: string;
+  svg: string;
+  alt: string;
+  imageSize: number;
+};
+
+function Header({ socialMedia }: HeaderProps) {
   const [drawer, setDrawer] = useState(false);
 
   const mobileView = useMediaQuery({
@@ -26,17 +35,6 @@ function Header(url: HeaderProps) {
     { href: '#about', label: 'Mitt företag' },
   ];
 
-  const socialMedia = [
-    {
-      href: 'https://www.instagram.com/growthmindsetandsoul/',
-      label: 'Instagram',
-    },
-    {
-      href: 'https://www.linkedin.com/in/hanna-klang-a12b6135a/',
-      label: 'LinkedIn',
-    },
-  ];
-
   const handleDrawerToggle = () => {
     setDrawer(!drawer);
   };
@@ -44,6 +42,8 @@ function Header(url: HeaderProps) {
   useEffect(() => {
     mobileView ? setDrawer(false) : null;
   }, [mobileView]);
+
+  const color = 'var(--primary-color)';
 
   return (
     <motion.header
@@ -78,17 +78,29 @@ function Header(url: HeaderProps) {
               drawer={drawer}
               toggleDrawer={handleDrawerToggle}
               navList={navList}
+              socialMedia={socialMedia}
             />
           </motion.div>
         ) : (
           <nav className="hidden xl:flex ml-4 pb-4">
-            <ul className="flex space-x-6">
+            <ul className="flex items-center space-x-6">
               {navList.map((item) => (
                 <li key={item.href}>
                   <a
                     href={item.href}
                     className="text-[1.3rem] hover:border-b-2 transition-border duration-50 ease-in-out">
                     {item.label}
+                  </a>
+                </li>
+              ))}
+              {socialMedia.map((item, index) => (
+                <li key={index}>
+                  <a href={item.url} target="_blank" rel="noopener noreferrer">
+                    {item.alt === 'Instagram' ? (
+                      <Instagram color={color} />
+                    ) : (
+                      <LinkedIn color={color} />
+                    )}
                   </a>
                 </li>
               ))}
