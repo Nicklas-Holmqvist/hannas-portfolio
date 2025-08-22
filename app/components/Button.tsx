@@ -20,12 +20,11 @@ function Button({ type = 'primary', label = 'Boka', url }: ButtonProps) {
   const targetValue = url.includes('mailto') ? '_self' : '_blank';
 
   return (
-    <a href={url} target={targetValue} className="no-underline">
-      <button
-        type="button"
-        className={`${typeOfButton} cursor-pointer py-2 px-6 border rounded transition border-2 border-secondary`}>
-        {label}
-      </button>
+    <a
+      href={url}
+      target={targetValue}
+      className={`${typeOfButton} cursor-pointer border rounded transition border-2 border-secondary text-center px-12 py-4`}>
+      <button type="button">{label}</button>
     </a>
   );
 }
