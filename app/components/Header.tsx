@@ -39,12 +39,12 @@ function Header(url: HeaderProps) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={fadeIn}
-      className="flex flex-row items-center justify-center xl:justify-between xl:px-20 pt-4 pb-6 md:pt-6 md:pb-10 fixed w-full z-50 bg-linear-to-b from-(--light-color) from-75% to-transparent">
+      className="flex flex-row items-center justify-center xl:justify-between xl:px-20 pt-8 pb-10 md:pt-6 md:pb-10 fixed w-full z-50 bg-linear-to-b from-(--light-color) from-75% to-transparent">
       {!mobileView && (
         <HamburgerButton toggleDrawer={handleDrawerToggle} active={drawer} />
       )}
       <h1
-        className={`text-2xl md:text-4xl xs:text-3xl px-6`}
+        className={`text-3xl md:text-4xl xs:text-3xl px-6`}
         onClick={() => window.scrollTo(0, 0)}>
         Growth mindset and soul
       </h1>
