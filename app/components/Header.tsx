@@ -16,7 +16,7 @@ function Header(url: HeaderProps) {
   const [drawer, setDrawer] = useState(false);
 
   const mobileView = useMediaQuery({
-    query: '(min-width: 1200px)',
+    query: '(min-width: 1280px)',
   });
 
   const navList = [
@@ -24,6 +24,17 @@ function Header(url: HeaderProps) {
     { href: '#reiki', label: 'Reiki healing' },
     { href: '#yoga', label: 'Meditativ Yoga' },
     { href: '#about', label: 'Mitt företag' },
+  ];
+
+  const socialMedia = [
+    {
+      href: 'https://www.instagram.com/growthmindsetandsoul/',
+      label: 'Instagram',
+    },
+    {
+      href: 'https://www.linkedin.com/in/hanna-klang-a12b6135a/',
+      label: 'LinkedIn',
+    },
   ];
 
   const handleDrawerToggle = () => {
@@ -39,12 +50,12 @@ function Header(url: HeaderProps) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={fadeIn}
-      className="flex flex-row items-center justify-center xl:justify-between xl:px-20 pt-8 pb-10 md:pt-6 md:pb-10 fixed w-full z-50 bg-linear-to-b from-(--light-color) from-75% to-transparent">
+      className="flex flex-row items-center justify-center xl:justify-between h-[7rem] px-10 fixed w-full z-50 bg-linear-to-b from-(--light-color) from-70% to-transparent">
       {!mobileView && (
         <HamburgerButton toggleDrawer={handleDrawerToggle} active={drawer} />
       )}
       <h1
-        className={`text-3xl md:text-4xl xs:text-3xl px-6`}
+        className={`text-2xl md:text-4xl xs:text-3xl pb-4`}
         onClick={() => window.scrollTo(0, 0)}>
         Growth mindset and soul
       </h1>
