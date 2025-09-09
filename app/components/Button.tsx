@@ -24,7 +24,9 @@ function Button({ type = 'primary', label = 'Boka', url }: ButtonProps) {
       href={url}
       target={targetValue}
       className={`${typeOfButton} cursor-pointer border rounded transition border-2 border-secondary text-center px-12 py-4`}>
-      <button type="button">{label}</button>
+      <button type="button" className="cursor-pointer">
+        {label}
+      </button>
     </a>
   );
 }

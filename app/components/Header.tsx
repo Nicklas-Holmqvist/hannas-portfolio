@@ -30,6 +30,7 @@ function Header({ socialMedia }: HeaderProps) {
 
   const navList = [
     { href: '#journey', label: 'Min resa' },
+    { href: '#coaching', label: 'Coaching' },
     { href: '#reiki', label: 'Reiki healing' },
     { href: '#yoga', label: 'Meditativ Yoga' },
     { href: '#about', label: 'Mitt företag' },
