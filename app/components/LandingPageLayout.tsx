@@ -7,6 +7,7 @@ import Reiki, { ReikiData } from './Reiki';
 import MyJourney, { MyJourneyData } from './MyJourney';
 import Footer, { FooterData } from './Footer';
 import { socialMediaData } from './Header';
+import Coaching from './Coaching';
 
 type DataProps = {
   data: {
@@ -20,11 +21,14 @@ type DataProps = {
 
 function LandingPageLayout({ data, socialMedia }: DataProps) {
   const { reiki, yoga, allAbouts, footer } = data;
+  const coaching = '';
   return (
     <div className="markdown">
       <Hero />
       <div className="flex flex-col items-center py-[6rem]">
         <MyJourney data={allAbouts[1]} />
+        <Lines />
+        <Coaching />
         <Lines />
         <Reiki data={reiki} />
         <Lines />
