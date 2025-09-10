@@ -22,11 +22,12 @@ const proza_libre = Proza_Libre({
 });
 
 export const metadata: Metadata = {
-  title: 'Hanna Klang | Growthmindsetandsoul | Reiki, Healing & Yoga',
+  title:
+    'Hanna Klang | Growthmindsetandsoul | Personlig Coaching, Reiki, Healing & Yoga',
   description:
-    'Hanna Klang, growthmindsetandsoul, erbjuder yoga och healing för inre balans, välmående och personlig utveckling med fokus på kropp, själ och sinne.',
+    'Hanna Klang, growthmindsetandsoul, erbjuder personlig coaching, yoga och healing för inre balans, välmående och personlig utveckling med fokus på kropp, själ och sinne.',
   keywords:
-    'Hanna Klang, growthmindsetandsoul, yoga, healing, Reiki, personlig utveckling, inre balans, välmående, meditation, andlig vägledning, holistiskt välmående, stresshantering, mindfulness, energiarbete, chakrabalansering, andlig praktik, kropp och själ, mental hälsa, livscoachning, andlig tillväxt, inre frid',
+    'Hanna Klang, growthmindsetandsoul personlig coaching, yoga, healing, Reiki, personlig utveckling, inre balans, välmående, meditation, andlig vägledning, holistiskt välmående, stresshantering, mindfulness, energiarbete, chakrabalansering, andlig praktik, kropp och själ, mental hälsa, livscoachning, andlig tillväxt, inre frid',
   authors: [
     {
       name: 'Hanna Klang',
@@ -34,9 +35,10 @@ export const metadata: Metadata = {
     },
   ],
   openGraph: {
-    title: 'Hanna Klang | Growthmindsetandsoul | Reiki, Healing & Yoga',
+    title:
+      'Hanna Klang | Growthmindsetandsoul | Personlig Coaching, Reiki, Healing & Yoga',
     description:
-      'Hanna Klang, growthmindsetandsoul, erbjuder yoga och healing för inre balans, välmående och personlig utveckling med fokus på kropp, själ och sinne.',
+      'Hanna Klang, growthmindsetandsoul, erbjuder personlig coaching, yoga och healing för inre balans, välmående och personlig utveckling med fokus på kropp, själ och sinne.',
     url: 'https://growthmindsetandsoul.se',
     siteName: 'Growthmindsetandsoul',
     images: 'https://growthmindsetandsoul.se/og-image.jpg',
