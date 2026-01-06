@@ -7,7 +7,6 @@ import { YogaData } from './components/Yoga';
 import { MyJourneyData } from './components/MyJourney';
 import LandingPageLayout from './components/LandingPageLayout';
 import { FooterData } from './components/Footer';
-import { svg } from 'framer-motion/client';
 
 export const revalidate = 0;
 
@@ -77,7 +76,7 @@ async function getLandingpage() {
   type DataProps = {
     reiki: ReikiData;
     yoga: YogaData;
-    allAbouts: MyJourneyData[];
+    allAbouts: MyJourneyData;
     footer: FooterData;
   };
 

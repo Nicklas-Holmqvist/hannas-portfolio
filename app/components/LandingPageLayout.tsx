@@ -13,7 +13,7 @@ type DataProps = {
   data: {
     reiki: ReikiData;
     yoga: YogaData;
-    allAbouts: MyJourneyData[];
+    allAbouts: MyJourneyData;
     footer: FooterData;
   };
   socialMedia: socialMediaData[];
@@ -22,11 +22,12 @@ type DataProps = {
 function LandingPageLayout({ data, socialMedia }: DataProps) {
   const { reiki, yoga, allAbouts, footer } = data;
   const coaching = '';
+  console.log(allAbouts);
   return (
     <div className="markdown">
       <Hero />
       <div className="flex flex-col items-center py-[6rem]">
-        <MyJourney data={allAbouts[1]} />
+        <MyJourney data={allAbouts} />
         <Lines />
         <Coaching />
         <Lines />
@@ -34,7 +35,6 @@ function LandingPageLayout({ data, socialMedia }: DataProps) {
         <Lines />
         <Yoga data={yoga} />
         <Lines />
-        <MyJourney data={allAbouts[0]} />
       </div>
       <Footer data={footer} socialMedia={socialMedia} />
     </div>
