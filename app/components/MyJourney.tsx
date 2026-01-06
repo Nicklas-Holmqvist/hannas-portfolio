@@ -16,11 +16,9 @@ function MyJourney({ data }: MyJourneyProps) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: false });
 
-  const isId = data.title.includes('Min väg hit') ? 'journey' : 'about';
-
   return (
     <motion.section
-      id={isId}
+      id={data.title}
       ref={ref}
       className={`max-w-[1800] scroll-mt-30 ${
         isInView ? 'opacity-100' : 'opacity-0'

@@ -33,7 +33,6 @@ function Header({ socialMedia }: HeaderProps) {
     { href: '#coaching', label: 'Coaching' },
     { href: '#reiki', label: 'Reiki healing' },
     { href: '#yoga', label: 'Meditativ Yoga' },
-    { href: '#about', label: 'Mitt företag' },
   ];
 
   const handleDrawerToggle = () => {
