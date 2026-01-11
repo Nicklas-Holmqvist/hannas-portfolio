@@ -2,11 +2,14 @@ import { notFound } from 'next/navigation';
 import { datoRequest } from '@/lib/datocms';
 
 import Header from './components/Header';
-import { ReikiData } from './components/Reiki';
 import { YogaData } from './components/Yoga';
+import { ReikiData } from './components/Reiki';
+import { DanceData } from './components/Dance';
+import { FooterData } from './components/Footer';
+import { CommentData } from './components/CommentSection';
+import { CoachingData } from './components/Coaching';
 import { MyJourneyData } from './components/MyJourney';
 import LandingPageLayout from './components/LandingPageLayout';
-import { FooterData } from './components/Footer';
 
 export const revalidate = 0;
 
@@ -31,6 +34,20 @@ async function getLandingpage() {
       }
     }
   }
+  coaching {
+    id
+    title
+    information
+    buttonText
+    buttonLink
+  }
+  dance {
+    id
+    title
+    information
+    buttonText
+    buttonLink
+  }
   yoga {
     id
     title
@@ -54,6 +71,11 @@ async function getLandingpage() {
     information
     id
   }
+  allComments {
+    id
+  	service
+    comment
+  	user}
   footer {
     busniessname
     phone
@@ -74,9 +96,12 @@ async function getLandingpage() {
 }`;
 
   type DataProps = {
+    coaching: CoachingData;
     reiki: ReikiData;
+    dance: DanceData;
     yoga: YogaData;
     allAbouts: MyJourneyData;
+    allComments: CommentData;
     footer: FooterData;
   };
 

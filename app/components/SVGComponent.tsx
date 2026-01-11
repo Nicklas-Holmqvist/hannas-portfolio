@@ -1,8 +1,6 @@
 'use client';
 
-import Image from 'next/image';
 import { ReactSVG } from 'react-svg';
-import { socialMediaData } from './Header';
 import Instagram from '../icons/Instagram';
 
 type SVGComponentProps = {
@@ -12,7 +10,7 @@ type SVGComponentProps = {
   color: string;
 };
 
-function SVGComponent({ svg, alt, imageSize, color }: SVGComponentProps) {
+function SVGComponent({ svg, imageSize, color }: SVGComponentProps) {
   return (
     <>
       <Instagram color={'--var(primary-color)'} />

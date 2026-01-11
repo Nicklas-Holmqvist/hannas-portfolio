@@ -1,7 +1,8 @@
 import Markdown from 'react-markdown';
 
-import Instagram from '../icons/Instagram';
 import LinkedIn from '../icons/LinkedIn';
+import Instagram from '../icons/Instagram';
+import { navList } from './LandingPageLayout';
 import { socialMediaData } from './Header';
 
 type FooterProps = {
@@ -34,6 +35,19 @@ function Footer({ data, socialMedia }: FooterProps) {
 
   return (
     <footer className="text-center text-light bg-primary w-full py-[6rem]">
+      <nav className="flex ml-4 pb-16 justify-center">
+        <ul className="flex flex-col xl:flex-row items-center xl:space-x-6">
+          {navList.map((item) => (
+            <li key={item.href}>
+              <a
+                href={item.href}
+                className="text-[1.3rem] hover:border-b-2 transition-border duration-50 ease-in-out">
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
       <h2>{data.title}</h2>
       <h3>{data.busniessname}</h3>
       <p className="py-1">

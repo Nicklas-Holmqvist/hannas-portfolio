@@ -1,14 +1,15 @@
 'use client';
 
-import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 
-import MobileMenu from './MobilMenu';
-import HamburgerButton from './HamburgerButton';
-import { fadeIn } from '../transitions/allTransitions';
-import { useMediaQuery } from 'react-responsive';
-import Instagram from '../icons/Instagram';
 import LinkedIn from '../icons/LinkedIn';
+import Instagram from '../icons/Instagram';
+import { fadeIn } from '../transitions/allTransitions';
+import MobileMenu from './MobilMenu';
+import { navList } from './LandingPageLayout';
+import HamburgerButton from './HamburgerButton';
+import { useMediaQuery } from 'react-responsive';
 
 type HeaderProps = {
   socialMedia: socialMediaData[];
@@ -27,13 +28,6 @@ function Header({ socialMedia }: HeaderProps) {
   const mobileView = useMediaQuery({
     query: '(min-width: 1280px)',
   });
-
-  const navList = [
-    { href: '#journey', label: 'Min resa' },
-    { href: '#coaching', label: 'Coaching' },
-    { href: '#reiki', label: 'Reiki healing' },
-    { href: '#yoga', label: 'Meditativ Yoga' },
-  ];
 
   const handleDrawerToggle = () => {
     setDrawer(!drawer);

@@ -11,21 +11,21 @@ type MyJourneyProps = {
 export type MyJourneyData = {
   title: string;
   information: string;
-};
+}[];
 function MyJourney({ data }: MyJourneyProps) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: false });
 
   return (
     <motion.section
-      id={data.title}
+      id="journey"
       ref={ref}
       className={`max-w-[1800] scroll-mt-30 ${
         isInView ? 'opacity-100' : 'opacity-0'
       } delay-100 transition-opacity duration-500 ease-in-out`}>
-      <h2 className="text-center">{data.title}</h2>
+      <h2 className="text-center mt-24">{data[0].title}</h2>
       <div className="text-center max-w-2xl">
-        <ReactMarkdown>{data.information}</ReactMarkdown>
+        <ReactMarkdown>{data[0].information}</ReactMarkdown>
       </div>
     </motion.section>
   );

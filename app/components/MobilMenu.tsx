@@ -1,10 +1,11 @@
 'use client';
 
-import { AnimatePresence, motion } from 'framer-motion';
 import React from 'react';
-import { socialMediaData } from './Header';
-import Instagram from '../icons/Instagram';
+import { motion } from 'framer-motion';
+
 import LinkedIn from '../icons/LinkedIn';
+import Instagram from '../icons/Instagram';
+import { socialMediaData } from './Header';
 
 type MobileMenuProps = {
   drawer: boolean;
