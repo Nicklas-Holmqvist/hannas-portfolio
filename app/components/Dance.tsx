@@ -5,53 +5,38 @@ import { useInView, motion } from 'framer-motion';
 
 import Button from './Button';
 import InfoSection from './InfoSection';
-import AdvantageSection from './AdvantageSection';
 
-type YogaProps = {
-  data: YogaData;
+type DanceProps = {
+  data: DanceData;
 };
 
-export type YogaData = {
+export type DanceData = {
   title: string;
   information: string;
   buttonText: string;
   buttonLink: string;
-  yogaAdvantage: {
-    title: string;
-    information: string;
-    advantage: Array<{
-      id: string;
-      information: string;
-      title?: string;
-      image: {
-        alt: string;
-        url: string;
-      };
-    }>;
-  }[];
 };
 
-function Yoga({ data }: YogaProps) {
+function Dance({ data }: DanceProps) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: false });
   return (
     <motion.section
-      id="yoga"
+      id="dance"
       ref={ref}
       className={`max-w-[1800] ${
         isInView ? 'opacity-100' : 'opacity-0'
       } delay-100 transition-opacity duration-500 ease-in-out scroll-mt-24`}>
       <InfoSection
         data={data}
-        image="/yoga.png"
-        imageAlt={'Yoga med Hanna Klang'}
+        image="/dance.png"
+        imageAlt={'Dans med Hanna Klang'}
       />
-      <div className="text-center py-8">
+      <div className="text-center pt-8">
         <Button type="primary" label={data.buttonText} url={data.buttonLink} />
       </div>
-      <AdvantageSection data={data.yogaAdvantage[0]} />
     </motion.section>
   );
 }
 
-export default Yoga;
+export default Dance;

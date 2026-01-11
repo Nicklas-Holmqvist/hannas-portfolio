@@ -41,11 +41,15 @@ function Reiki({ data }: ReikiProps) {
       className={`max-w-[1800] scroll-mt-24 ${
         isInView ? 'opacity-100' : 'opacity-0'
       } delay-100 transition-opacity duration-500 ease-in-out`}>
-      <InfoSection data={data} />
-      <AdvantageSection data={data.reikiAdvantage[0]} />
-      <div className="text-center pt-8">
+      <InfoSection
+        data={data}
+        image="/reiki.png"
+        imageAlt="Reiki healing med Hanna Klang"
+      />
+      <div className="text-center py-8">
         <Button type="primary" label={data.buttonText} url={data.buttonLink} />
       </div>
+      <AdvantageSection data={data.reikiAdvantage[0]} />
     </motion.section>
   );
 }
