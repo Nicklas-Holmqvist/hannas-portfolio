@@ -4,6 +4,7 @@ import React, { useRef } from 'react';
 import { useInView, motion } from 'framer-motion';
 
 import Comment from './Comment';
+import { div } from 'framer-motion/client';
 
 type CommentSectionProps = {
   data: CommentData;
@@ -28,7 +29,9 @@ function CommentSection({ data }: CommentSectionProps) {
       <h3 className="text-center">Kund recensioner</h3>
       <div className="flex flex-row flex-wrap place-content-around pb-0">
         {data.map((comment) => (
-          <Comment data={comment} />
+          <div key={comment.id}>
+            <Comment data={comment} />
+          </div>
         ))}
       </div>
     </motion.section>
