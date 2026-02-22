@@ -42,9 +42,9 @@ function LandingPageLayout({ data, socialMedia }: DataProps) {
         <Lines />
         <Coaching data={coaching} />
         <Lines />
-        <Reiki data={reiki} />
-        <Lines />
         <Dance data={dance} />
+        <Lines />
+        <Reiki data={reiki} />
         <Lines />
         <Yoga data={yoga} />
         <Lines />
