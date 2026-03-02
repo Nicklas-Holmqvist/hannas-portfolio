@@ -12,10 +12,14 @@ import MyJourney, { MyJourneyData } from './MyJourney';
 import CommentSection, { CommentData } from './CommentSection';
 
 export const navList = [
+  {
+    href: 'https://www.bokadirekt.se/places/hanna-klang-growthmindsetandsoul-130907',
+    label: 'Boka direkt',
+  },
   { href: '#journey', label: 'Min resa' },
   { href: '#coaching', label: 'Coaching' },
-  { href: '#reiki', label: 'Reiki healing' },
   { href: '#dance', label: 'Dans' },
+  { href: '#reiki', label: 'Reiki healing' },
   { href: '#yoga', label: 'Meditativ Yoga' },
 ];
 
