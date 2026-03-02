@@ -20,7 +20,7 @@ export const navList = [
   { href: '#coaching', label: 'Coaching' },
   { href: '#dance', label: 'Dans' },
   { href: '#reiki', label: 'Reiki healing' },
-  { href: '#yoga', label: 'Meditativ Yoga' },
+  // { href: '#yoga', label: 'Meditativ Yoga' },
 ];
 
 type DataProps = {
@@ -49,8 +49,8 @@ function LandingPageLayout({ data, socialMedia }: DataProps) {
         <Dance data={dance} />
         <Lines />
         <Reiki data={reiki} />
-        <Lines />
-        <Yoga data={yoga} />
+        {/* <Lines /> */}
+        {/* <Yoga data={yoga} /> */}
         <Lines />
         <CommentSection data={allComments} />
       </div>
