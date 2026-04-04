@@ -41,7 +41,7 @@ export const metadata: Metadata = {
       'Hanna Klang, growthmindsetandsoul, erbjuder personlig coaching, yoga och healing för inre balans, välmående och personlig utveckling med fokus på kropp, själ och sinne.',
     url: 'https://growthmindsetandsoul.se',
     siteName: 'Growthmindsetandsoul',
-    images: 'https://growthmindsetandsoul.se/og-image.jpg',
+    images: 'https://growthmindsetandsoul.se/hero.jpg',
     locale: 'sv_SE',
     type: 'website',
   },
