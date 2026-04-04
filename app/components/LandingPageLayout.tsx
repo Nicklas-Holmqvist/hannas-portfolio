@@ -10,6 +10,7 @@ import Footer, { FooterData } from './Footer';
 import Coaching, { CoachingData } from './Coaching';
 import MyJourney, { MyJourneyData } from './MyJourney';
 import CommentSection, { CommentData } from './CommentSection';
+import Newsletter from './Newsletter';
 
 export const navList = [
   {
@@ -51,8 +52,9 @@ function LandingPageLayout({ data, socialMedia }: DataProps) {
         <Reiki data={reiki} />
         {/* <Lines /> */}
         {/* <Yoga data={yoga} /> */}
-        <Lines />
         <CommentSection data={allComments} />
+        <Lines />
+        <Newsletter />
       </div>
       <Footer data={footer} socialMedia={socialMedia} />
     </div>
