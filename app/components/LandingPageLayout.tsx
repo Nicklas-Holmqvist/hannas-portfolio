@@ -8,13 +8,14 @@ import Dance, { DanceData } from './Dance';
 import Coaching, { CoachingData } from './Coaching';
 import MyJourney, { MyJourneyData } from './MyJourney';
 import CommentSection, { CommentData } from './CommentSection';
+import EventSection from './EventSection';
 
 export const navList = [
   {
     href: 'https://www.bokadirekt.se/places/hanna-klang-growthmindsetandsoul-130907',
     label: 'Boka direkt',
   },
-  { href: '/retreat', label: 'Event' },
+  { href: '/retreat', label: 'Retreat' },
   { href: '/#journey', label: 'Min resa' },
   { href: '/#coaching', label: 'Coaching' },
   { href: '/#dance', label: 'Dans' },
@@ -38,6 +39,8 @@ function LandingPageLayout({ data }: DataProps) {
       <Hero />
       <div className="flex flex-col items-center py-[6rem]">
         <MyJourney data={allAbouts} />
+        <Lines />
+        <EventSection />
         <Lines />
         <Coaching data={coaching} />
         <Lines />
