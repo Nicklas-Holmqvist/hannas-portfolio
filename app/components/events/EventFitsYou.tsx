@@ -14,7 +14,7 @@ function EventFitsYou() {
       className={`${
         isInView ? 'opacity-100' : 'opacity-0'
       } delay-100 transition-opacity duration-500 ease-in-out scroll-mt-24`}>
-      <h2>Retreatet passar dig som...</h2>
+      <h2 className="text-3xl md:text-4xl">Retreatet passar dig som...</h2>
       <ul>
         <ListItem
           listDot="check"

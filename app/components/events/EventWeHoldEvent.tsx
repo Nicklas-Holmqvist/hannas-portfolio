@@ -14,7 +14,7 @@ function EventWeHoldEvent() {
       className={`${
         isInView ? 'opacity-100' : 'opacity-0'
       } delay-100 transition-opacity duration-500 ease-in-out scroll-mt-24 pt-16`}>
-      <h2>Vi som håller retretet</h2>
+      <h2 className="text-3xl md:text-4xl">Vi som håller retretet</h2>
       <Paragraph
         text=" Mod att mjukna är skapat av Hanna Klang tillsammans med Ellen Cämpe,
           två kvinnor med lång erfarenhet av att guida människor genom

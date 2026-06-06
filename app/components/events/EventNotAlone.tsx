@@ -14,7 +14,9 @@ function EventNotAlone() {
       className={`${
         isInView ? 'opacity-100' : 'opacity-0'
       } delay-100 transition-opacity duration-500 ease-in-out scroll-mt-24 pt-20 pb-24`}>
-      <h2>Du behöver inte bära allt ensam längre.</h2>
+      <h2 className="text-3xl md:text-4xl">
+        Du behöver inte bära allt ensam längre.
+      </h2>
       <p className="max-w-[70ch] mx-auto pb-8">
         Anmäl ditt intresse för att få första tillgång till platserna.
       </p>

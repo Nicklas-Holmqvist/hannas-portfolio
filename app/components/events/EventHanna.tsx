@@ -22,7 +22,7 @@ function EventHanna() {
           className="object-cover"
           alt="Growth mindset and soul hero image"
         />
-        <h2 className="absolute top-[40%] left-[70%] md:top-[55%] md:left-[65%] transform -translate-x-1/2 -translate-y-1/2 text-white">
+        <h2 className="absolute top-[40%] left-[70%] md:top-[55%] md:left-[65%] transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl md:text-4xl">
           Möt Hanna Klang
         </h2>
       </div>

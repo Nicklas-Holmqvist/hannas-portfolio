@@ -46,15 +46,15 @@ function EventExperience() {
       className={`${
         isInView ? 'opacity-100' : 'opacity-0'
       } delay-100 transition-opacity duration-500 ease-in-out scroll-mt-24 pt-8 max-w-[1280px] mx-auto`}>
-      <h2>Du kommer att få uppleva</h2>
+      <h2 className="text-3xl md:text-4xl">Du kommer att få uppleva</h2>
       <article className="grid grid-cols-1 xl:grid-cols-3 gap-16 ">
-        {EventCard.map((card, index) =>
-          Cards({
-            key: index,
-            title: card.title,
-            description: card.description,
-          }),
-        )}
+        {EventCard.map((card, index) => (
+          <Cards
+            key={index}
+            title={card.title}
+            description={card.description}
+          />
+        ))}
       </article>
     </motion.section>
   );
