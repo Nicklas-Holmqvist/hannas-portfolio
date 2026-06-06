@@ -3,10 +3,10 @@ import Markdown from 'react-markdown';
 import LinkedIn from '../icons/LinkedIn';
 import Instagram from '../icons/Instagram';
 import { navList } from './LandingPageLayout';
+import { getLandingpage } from '../page';
 import { socialMediaData } from './Header';
 
 type FooterProps = {
-  data: FooterData;
   socialMedia: socialMediaData[];
 };
 
@@ -30,8 +30,9 @@ export type FooterData = {
 
 const color = 'var(--light-color)';
 
-function Footer({ data, socialMedia }: FooterProps) {
+async function Footer({ socialMedia }: FooterProps) {
   const date = new Date();
+  const { footer } = await getLandingpage();
 
   return (
     <footer className="text-center text-light bg-primary w-full py-[6rem]">
@@ -48,16 +49,16 @@ function Footer({ data, socialMedia }: FooterProps) {
           ))}
         </ul>
       </nav>
-      <h2>{data.title}</h2>
-      <h3>{data.busniessname}</h3>
+      <h2>{footer.title}</h2>
+      <h3>{footer.busniessname}</h3>
       <p className="py-1">
-        <a href={`mailto:${data.email}`}>{data.email}</a>
+        <a href={`mailto:${footer.email}`}>{footer.email}</a>
       </p>
       <p className="pt-1 pb-6">
-        <a href={`tel:${data.phone}`}>{data.phone}</a>
+        <a href={`tel:${footer.phone}`}>{footer.phone}</a>
       </p>
       <address>
-        <Markdown>{data.address}</Markdown>
+        <Markdown>{footer.address}</Markdown>
       </address>
       <div className="flex justify-center items-center gap-8 pt-10">
         {socialMedia.map((item, index) => (

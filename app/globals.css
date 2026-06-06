@@ -56,6 +56,10 @@ span {
     font-family: var(--parisienne);
     font-size: 3rem;
   }
+  h1 a {
+    font-family: var(--parisienne);
+    font-size: 3rem;
+  }
   h2 {
     font-family: var(--font-playfair-display);
     font-size: 2.5rem;

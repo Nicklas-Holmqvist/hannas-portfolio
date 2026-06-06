@@ -2,26 +2,23 @@ import React from 'react';
 
 import Hero from './Hero';
 import Lines from './Lines';
-import Yoga, { YogaData } from './Yoga';
-import { socialMediaData } from './Header';
+import Newsletter from './Newsletter';
 import Reiki, { ReikiData } from './Reiki';
 import Dance, { DanceData } from './Dance';
-import Footer, { FooterData } from './Footer';
 import Coaching, { CoachingData } from './Coaching';
 import MyJourney, { MyJourneyData } from './MyJourney';
 import CommentSection, { CommentData } from './CommentSection';
-import Newsletter from './Newsletter';
 
 export const navList = [
   {
     href: 'https://www.bokadirekt.se/places/hanna-klang-growthmindsetandsoul-130907',
     label: 'Boka direkt',
   },
-  { href: '#journey', label: 'Min resa' },
-  { href: '#coaching', label: 'Coaching' },
-  { href: '#dance', label: 'Dans' },
-  { href: '#reiki', label: 'Reiki healing' },
-  // { href: '#yoga', label: 'Meditativ Yoga' },
+  { href: '/retreat', label: 'Event' },
+  { href: '/#journey', label: 'Min resa' },
+  { href: '/#coaching', label: 'Coaching' },
+  { href: '/#dance', label: 'Dans' },
+  { href: '/#reiki', label: 'Reiki healing' },
 ];
 
 type DataProps = {
@@ -29,16 +26,13 @@ type DataProps = {
     coaching: CoachingData;
     reiki: ReikiData;
     dance: DanceData;
-    yoga: YogaData;
     allAbouts: MyJourneyData;
-    footer: FooterData;
     allComments: CommentData;
   };
-  socialMedia: socialMediaData[];
 };
 
-function LandingPageLayout({ data, socialMedia }: DataProps) {
-  const { coaching, reiki, dance, yoga, allAbouts, allComments, footer } = data;
+function LandingPageLayout({ data }: DataProps) {
+  const { coaching, reiki, dance, allAbouts, allComments } = data;
   return (
     <div className="markdown">
       <Hero />
@@ -50,13 +44,10 @@ function LandingPageLayout({ data, socialMedia }: DataProps) {
         <Dance data={dance} />
         <Lines />
         <Reiki data={reiki} />
-        {/* <Lines /> */}
-        {/* <Yoga data={yoga} /> */}
         <CommentSection data={allComments} />
         <Lines />
         <Newsletter />
       </div>
-      <Footer data={footer} socialMedia={socialMedia} />
     </div>
   );
 }

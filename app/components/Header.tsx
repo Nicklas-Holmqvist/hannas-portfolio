@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import Link from 'next/link';
 
 import LinkedIn from '../icons/LinkedIn';
 import Instagram from '../icons/Instagram';
@@ -44,14 +45,18 @@ function Header({ socialMedia }: HeaderProps) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={fadeIn}
+      viewport={{ once: true }}
       className="flex flex-row items-center justify-center xl:justify-between h-[7rem] px-10 fixed w-full z-50 bg-linear-to-b from-(--light-color) from-70% to-transparent">
       {!mobileView && (
         <HamburgerButton toggleDrawer={handleDrawerToggle} active={drawer} />
       )}
-      <h1
-        className={`text-2xl md:text-4xl xs:text-3xl pb-4`}
-        onClick={() => window.scrollTo(0, 0)}>
-        Growth mindset and soul
+      <h1 className={`pb-6`}>
+        <Link
+          className={`text-2xl md:text-4xl xs:text-3xl `}
+          href="/"
+          onClick={() => window.scrollTo(0, 0)}>
+          Growth mindset and soul
+        </Link>
       </h1>
       <AnimatePresence>
         {drawer ? (
@@ -80,22 +85,25 @@ function Header({ socialMedia }: HeaderProps) {
             <ul className="flex items-center space-x-6">
               {navList.map((item) => (
                 <li key={item.href}>
-                  <a
+                  <Link
                     href={item.href}
                     className="text-[1.3rem] hover:border-b-2 transition-border duration-50 ease-in-out">
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
               {socialMedia.map((item, index) => (
                 <li key={index}>
-                  <a href={item.url} target="_blank" rel="noopener noreferrer">
+                  <Link
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer">
                     {item.alt === 'Instagram' ? (
                       <Instagram color={color} />
                     ) : (
                       <LinkedIn color={color} />
                     )}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
