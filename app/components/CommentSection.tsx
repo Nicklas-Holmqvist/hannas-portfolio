@@ -4,7 +4,6 @@ import React, { useRef } from 'react';
 import { useInView, motion } from 'framer-motion';
 
 import Comment from './Comment';
-import { div } from 'framer-motion/client';
 
 type CommentSectionProps = {
   data: CommentData;

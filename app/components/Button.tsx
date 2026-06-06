@@ -17,12 +17,16 @@ function Button({ type = 'primary', label = 'Boka', url }: ButtonProps) {
   const typeOfButton =
     type === 'primary' ? primaryButtonStyle : secondaryButtonStyle;
 
-  const targetValue = url.includes('mailto') ? '_self' : '_blank';
+  const targetValue = () => {
+    if (url.includes('mailto')) return '_self';
+    if (url.includes('#valjer-mig-sjalv')) return '_self';
+    else return '_blank';
+  };
 
   return (
     <a
       href={url}
-      target={targetValue}
+      target={targetValue()}
       className={`${typeOfButton} cursor-pointer border rounded transition border-2 border-secondary text-center px-12 py-4`}>
       <button type="button" className="cursor-pointer">
         {label}

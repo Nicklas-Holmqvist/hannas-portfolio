@@ -3,6 +3,8 @@ import { Playfair_Display, Proza_Libre, Parisienne } from 'next/font/google';
 
 import './globals.css';
 import ThemeProvider from './theme/theme-provider';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 const playfair_display = Playfair_Display({
   variable: '--font-playfair-display',
@@ -47,6 +49,21 @@ export const metadata: Metadata = {
   },
 };
 
+const socialMediaLinks = [
+  {
+    url: 'https://www.instagram.com/growthmindsetandsoul/',
+    svg: '/instagram.svg',
+    alt: 'Instagram',
+    imageSize: 25,
+  },
+  {
+    url: 'https://www.linkedin.com/in/hanna-klang-1a9b4a1b3/',
+    svg: '/linkedin.svg',
+    alt: 'LinkedIn',
+    imageSize: 25,
+  },
+];
+
 const light = 'bg-[#F1EFE3] text-[#2A353D]';
 const dark = 'dark:bg-[#2F4157] dark:text-[#FFFFFF]';
 
@@ -64,7 +81,9 @@ export default function RootLayout({
           defaultTheme="light"
           enableSystem
           disableTransitionOnChange>
+          <Header socialMedia={socialMediaLinks} />
           {children}
+          <Footer socialMedia={socialMediaLinks} />
         </ThemeProvider>
       </body>
     </html>

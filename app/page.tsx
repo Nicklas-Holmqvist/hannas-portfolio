@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation';
 import { datoRequest } from '@/lib/datocms';
 
-import Header from './components/Header';
 import { YogaData } from './components/Yoga';
 import { ReikiData } from './components/Reiki';
 import { DanceData } from './components/Dance';
@@ -13,7 +12,7 @@ import LandingPageLayout from './components/LandingPageLayout';
 
 export const revalidate = 0;
 
-async function getLandingpage() {
+export async function getLandingpage() {
   const query = `query work {
   reiki {
     id
@@ -115,24 +114,9 @@ async function getLandingpage() {
 async function Home() {
   const data = await getLandingpage();
 
-  const socialMediaLinks = [
-    {
-      url: data.footer.instagramLink,
-      svg: '/instagram.svg',
-      alt: 'Instagram',
-      imageSize: 25,
-    },
-    {
-      url: data.footer.linkedinLink,
-      svg: '/linkedin.svg',
-      alt: 'LinkedIn',
-      imageSize: 25,
-    },
-  ];
   return (
     <div className="">
-      <Header socialMedia={socialMediaLinks} />
-      <LandingPageLayout data={data} socialMedia={socialMediaLinks} />
+      <LandingPageLayout data={data} />
     </div>
   );
 }
