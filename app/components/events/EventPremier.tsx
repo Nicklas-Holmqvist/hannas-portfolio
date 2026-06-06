@@ -16,7 +16,9 @@ function EventPremier() {
         isInView ? 'opacity-100' : 'opacity-0'
       } delay-100 transition-opacity duration-500 ease-in-out scroll-mt-24 py-8 text-white bg-primary`}>
       <Lines color="white" />
-      <h2>Premiärretreat &#10055; Begränsat antal platser</h2>
+      <h2 className="text-3xl md:text-4xl">
+        Premiärretreat &#10055; Begränsat antal platser
+      </h2>
 
       <p className="max-w-[70ch] mx-auto pb-8">
         Det här är första gången vi håller

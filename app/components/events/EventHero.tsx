@@ -24,11 +24,11 @@ function EventHero() {
         />
       </div>
       <div className="absolute top-[50%] left-[50%] w-[80%] transform -translate-x-1/2 -translate-y-1/2">
-        <h1 className="text-[5rem]">Mod att mjukna</h1>
-        <p className="mt-4 mb-8  color-gray-500">
+        <h1 className="text-5xl md:text-[5rem]">Mod att mjukna</h1>
+        <p className="mt-4 mb-8  color-gray-500 text-sm md:text-xl">
           12-13 september 2026 &#10055; Premiärretreat för kvinnor
         </p>
-        <h4 className="max-w-[45ch] text-[1.5rem] mb-10 mx-auto">
+        <h4 className="max-w-[45ch] text-[1rem] md:text-[1.5rem] mb-10 mx-auto">
           Ett retreat för kvinnor som längtar efter att sakta ner, landa i
           kroppen och återknyta kontakten med hela sig själva
         </h4>

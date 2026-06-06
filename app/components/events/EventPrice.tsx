@@ -16,7 +16,7 @@ function EventPrice() {
         isInView ? 'opacity-100' : 'opacity-0'
       } delay-100 transition-opacity duration-500 ease-in-out scroll-mt-24 grid grid-cols-1 xl:grid-cols-2 gap-4 py-16 max-w-[1280px] mx-auto`}>
       <div>
-        <h2>Det här ingår</h2>
+        <h2 className="text-3xl md:text-4xl">Det här ingår</h2>
         <ul>
           <ListItem listDot="star" listText="Boende" />
           <ListItem listDot="star" listText="Alla måltider, fika, te & frukt" />
@@ -28,7 +28,7 @@ function EventPrice() {
         </ul>
       </div>
       <div>
-        <h2>Investering</h2>
+        <h2 className="text-3xl md:text-4xl">Investering</h2>
         <h4>
           Early Bird<br></br>*<b>8 888 kr</b>
         </h4>

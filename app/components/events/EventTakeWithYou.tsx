@@ -14,7 +14,7 @@ function EventTakeWithYou() {
       className={`${
         isInView ? 'opacity-100' : 'opacity-0'
       } delay-100 transition-opacity duration-500 ease-in-out scroll-mt-24 bg-white py-32 my-16`}>
-      <h2>Det här tar du med dig</h2>
+      <h2 className="text-3xl md:text-4xl">Det här tar du med dig</h2>
       <div>
         <ul>
           <ListItem listDot="star" listText="Mer klarhet och inre lugn" />

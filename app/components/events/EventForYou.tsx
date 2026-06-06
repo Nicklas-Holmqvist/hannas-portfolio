@@ -14,7 +14,9 @@ function EventForYou() {
       className={`${
         isInView ? 'opacity-100' : 'opacity-0'
       } delay-100 transition-opacity duration-500 ease-in-out scroll-mt-24 pt-16`}>
-      <h2>Det här retreater är för dig som...</h2>
+      <h2 className="text-3xl md:text-4xl">
+        Det här retreater är för dig som...
+      </h2>
       <Paragraph
         text="För dig som är trött på att alltid vara stark, duktig och tillgänglig
           för alla andra. Under två dagar får du lämna vardagens brus och

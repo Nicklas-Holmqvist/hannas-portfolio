@@ -17,7 +17,9 @@ function EventNotStrong() {
       <p className="pb-2">
         Ett tryggt space för vila, närvaro och återhämtning.
       </p>
-      <h2>Här behöver du inte vara stark hela tiden</h2>
+      <h2 className="text-3xl md:text-4xl">
+        Här behöver du inte vara stark hela tiden
+      </h2>
       <ParagraphItalic text="Du behöver inte prestera." />
       <ParagraphItalic text="Du behöver inte bära allt ensam." />
       <ParagraphItalic text="Du behöver inte fixa dig själv." />
