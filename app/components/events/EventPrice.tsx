@@ -4,6 +4,7 @@ import React, { useRef } from 'react';
 import { useInView, motion } from 'framer-motion';
 
 import ListItem from './ListItem';
+import Link from 'next/link';
 
 function EventPrice() {
   const ref = useRef<HTMLDivElement>(null);
@@ -14,7 +15,7 @@ function EventPrice() {
       ref={ref}
       className={`${
         isInView ? 'opacity-100' : 'opacity-0'
-      } delay-100 transition-opacity duration-500 ease-in-out scroll-mt-24 grid grid-cols-1 xl:grid-cols-2 gap-4 py-16 max-w-[1280px] mx-auto`}>
+      } delay-100 transition-opacity duration-500 ease-in-out scroll-mt-24 grid grid-cols-1 xl:grid-cols-3 gap-4 py-16 max-w-[1280px] mx-auto`}>
       <div>
         <h2 className="text-3xl md:text-4xl">Det här ingår</h2>
         <ul>
@@ -37,9 +38,21 @@ function EventPrice() {
           Ordinarie pris<br></br>
           <b>1 1111 kr</b>
         </h4>
-        <p className="max-w-[30ch] mx-auto">
+        <p className="max-w-[30ch] mx-auto pb-4">
           50% handpenning betalas vid bokning för att säkra din plats
         </p>
+      </div>
+      <div>
+        <h2 className="text-3xl md:text-4xl">Destination</h2>
+        <h4 className="max-w-[30ch] mx-auto">
+          Carpe Diem Sprängskulla, <br></br> Veddige
+        </h4>
+        <Link
+          href="https://maps.app.goo.gl/DmP3rpZZ9mXNrGW86"
+          target="_blank"
+          className="text-primary underline">
+          Hitta hit
+        </Link>
       </div>
     </motion.section>
   );
