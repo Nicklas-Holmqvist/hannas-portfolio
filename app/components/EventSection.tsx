@@ -32,7 +32,11 @@ function EventSection() {
         <Paragraph text="Tillsammans delar vi en vision om att skapa trygga rum där kvinnor får släppa prestation, landa i kroppen och hitta tillbaka till sig själva." />
       </div>
       <div className="text-center pt-8">
-        <Button label="Läs mer om retreatet" url="/retreat" type="primary" />
+        <Button
+          label="Intresseanmälan"
+          url={`mailto:hanna.klang@outlook.com"`}
+          type="primary"
+        />
       </div>
     </motion.section>
   );

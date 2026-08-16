@@ -21,7 +21,7 @@ function Button({ type = 'primary', label = 'Boka', url }: ButtonProps) {
   const targetValue = () => {
     if (url.includes('mailto')) return '_self';
     if (url.includes('#valjer-mig-sjalv')) return '_self';
-    if (url.includes('/retreat')) return '_self';
+    if (url.includes('mailto:hanna.klang@outlook.com"')) return '_self';
     else return '_blank';
   };
 

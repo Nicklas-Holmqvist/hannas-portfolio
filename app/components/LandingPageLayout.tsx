@@ -15,10 +15,10 @@ export const navList = [
     href: 'https://www.bokadirekt.se/places/hanna-klang-growthmindsetandsoul-130907',
     label: 'Boka direkt',
   },
-  { href: '/retreat', label: 'Retreat' },
+  { href: '/#events', label: 'Events' },
   { href: '/#journey', label: 'Min resa' },
-  { href: '/#coaching', label: 'Coaching' },
-  { href: '/#dance', label: 'Dans' },
+  { href: '/#coaching', label: 'Mentorskap' },
+  { href: '/#dance', label: 'Dans & Rörelse' },
   { href: '/#reiki', label: 'Reiki healing' },
 ];
 
